@@ -165,6 +165,7 @@ public class BinarySearchTree {
 			node = parentNode;
 			parentNode = parentNode.parent;
 		}
+		
 		return parentNode;
 	}
 
@@ -181,6 +182,7 @@ public class BinarySearchTree {
 			root = newNode;
 			return;
 		}
+		
 		while (pNode != null) {
 			parentNode = pNode;
 			if (key < pNode.key) {
@@ -192,6 +194,7 @@ public class BinarySearchTree {
 				return;
 			}
 		}
+		
 		if (key < parentNode.key) {
 			parentNode.leftChild = newNode;
 			newNode.parent = parentNode;
@@ -333,6 +336,7 @@ public class BinarySearchTree {
 		System.out.println("二叉查找树转换为有序列表: " + bst.toStringOfOrderList());
 	}
 
+	// 测试
 	public static void main(String[] args) {
 		try {
 			BinarySearchTree bst = new BinarySearchTree();
